@@ -5,21 +5,36 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import LoginForm from './componentss/LoginForm'
 import App from './App'
 import Register from './componentss/registration'
+import LoginPage from './pages/LoginPage'
 
 // 3 estilizar o app
+/* Criar componentes FormInput e FormButton
+FormInput recebe label como props. Se nada vier nessa propriedade, o label é omitido do componente
+FormButton recebe o texto do botão. Esse texto não pode ser nulo. Se nada vier, recebe um texto default
+
+Fazer curso de Sass e aplicar na estrutura
+
+Estilizar tudo e deixar bonita
+
+Rodar o lint com autofix
+
+Estudar Flexbox e grid
+
+grid e mediaquery*
+*/
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App/>,
+    element: <App />,
     children: [
       {
         path: '/',
-        element: <LoginForm/>
+        element: <LoginPage />
       },
       {
         path: '/register',
-        element: <Register/>
+        element: <Register />
       }
 
     ]

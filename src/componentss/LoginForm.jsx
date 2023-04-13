@@ -27,24 +27,29 @@ const LoginForm = (props) => {
   }
   return (
 
-        <div className='login-form'>
-            <form onSubmit={handleSubmit}>
-
-                <label htmlFor="email">Email</label>
-                <input value={email} type="email" placeholder="ex:youremail@email.com" id="email" name="email" onChange={handleEmilChange} />
-
-                <label htmlFor="password">PassWord</label>
-                <input value={pass} type="password" placeholder="**********" id="password" name="password" onChange={handlePassChange} />
-
-                <button type="submit">Log In</button>
-
-            </form>
-
-            <Link to="/register"><button >
-                Don't have an account? Register here
-                </button></Link>
-
+    <div className='login-form'>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="email">Email</label>
+          <input value={email} type="email" placeholder="ex:youremail@email.com" id="email" name="email" onChange={handleEmilChange} />
         </div>
+        <div>
+          <label htmlFor="password">PassWord</label>
+          <input value={pass} type="password" placeholder="**********" id="password" name="password" onChange={handlePassChange} />
+        </div>
+        <div>
+          <button type="submit">Log In</button>
+        </div>
+
+      </form>
+
+      <Link to="/register">
+        <button >
+          Don't have an account? Register here
+          np</button>
+      </Link>
+
+    </div>
   )
 }
 

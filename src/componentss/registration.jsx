@@ -37,23 +37,23 @@ const Register = (props) => {
   }
   return (
 
-        <div> <form onSubmit={handleSubmit}>
+    <div> <form onSubmit={handleSubmit}>
 
-            <label htmlFor="name">Full Name</label>
-            <input type="text" value={name} id="name" placeholder='Full Name' onChange={handleNameChange} />
+      <label htmlFor="name">Full Name</label>
+      <input type="text" value={name} id="name" placeholder='Full Name' onChange={handleNameChange} />
 
-         <label htmlFor="email">Email</label>
-         <input value={email} type="email" placeholder="ex:youremail@email.com" id="email" name="email" onChange={handleEmilChange}/>
+      <label htmlFor="email">Email</label>
+      <input value={email} type="email" placeholder="ex:youremail@email.com" id="email" name="email" onChange={handleEmilChange} />
 
-         <label htmlFor="password">PassWord</label>
-         <input value={pass} type="password" placeholder="**********" id="password" name="password" onChange={handlePassChange}/>
+      <label htmlFor="password">PassWord</label>
+      <input value={pass} type="password" placeholder="**********" id="password" name="password" onChange={handlePassChange} />
 
-         <button type="submit">Register</button>
+      <button type="submit">Register</button>
 
-      </form>
+    </form>
       <Link to="/"><button>
         Already have an account? Log in here
-        </button></Link>
-      </div>)
+      </button></Link>
+    </div>)
 }
 export default Register
