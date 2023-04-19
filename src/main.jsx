@@ -16,8 +16,6 @@ Fazer curso de Sass e aplicar na estrutura
 
 Estilizar tudo e deixar bonita
 
-Rodar o lint com autofix
-
 Estudar Flexbox e grid
 
 grid e mediaquery*

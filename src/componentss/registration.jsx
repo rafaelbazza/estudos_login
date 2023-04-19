@@ -51,7 +51,7 @@ const Register = (props) => {
       <button type="submit">Register</button>
 
     </form>
-      <Link to="/"><button>
+    <Link to="/"><button>
         Already have an account? Log in here
       </button></Link>
     </div>)
