@@ -34,48 +34,45 @@ const LoginForm = () => {
     <div className='login-form'>
       <form onSubmit={handleSubmit}>
 
-<TextField
+        <TextField
 
-title="Email"
-placeholder="ex:youremail@email.com"
-html="email"
-id="email"
-type="email"
-name="email"
-value={email}
-onchange={handleEmilChange}
+          title="Email"
+          placeholder="ex:youremail@email.com"
+          html="email"
+          id="email"
+          type="email"
+          name="email"
+          value={email}
+          onchange={handleEmilChange}
 
->
+        />
 
-</TextField>
+        <TextField
 
-<TextField
+          title="Password"
+          placeholder="************"
+          html="password"
+          id="password"
+          type="password"
+          name="password"
+          value={pass}
+          onchange={handlePassChange}
 
-title="Password"
-placeholder="************"
-html="password"
-id="password"
-type="password"
-name="password"
-value={pass}
-onchange={handlePassChange}
+        />
 
->
+        <Button
 
-</TextField>
-<Button
+          type="submit"
+          title="Log In"
 
-type="submit"
-title="Log In"
-
-/>
+        />
 
       </form>
 
       <Link to="/register">
-      <Button
-      title="Don't have an account? Register here"
-      />
+        <Button
+          title="Don't have an account? Register here"
+        />
       </Link>
 
     </div>

@@ -20,6 +20,7 @@ const TextField = (props) => {
              name={props.name}
              value={props.value}
              onChange={props.onchange}
+             required
 
             ></input>
 

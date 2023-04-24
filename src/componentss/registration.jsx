@@ -1,6 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import TextField from './TextField'
+import Button from './ButtonComponent'
 
 const Register = (props) => {
   const navigate = useNavigate()
@@ -13,7 +15,7 @@ const Register = (props) => {
     setName(e.target.value)
   }
 
-  const handleEmilChange = (e) => {
+  const handleEmailChange = (e) => {
     setEmail(e.target.value)
   }
 
@@ -39,21 +41,53 @@ const Register = (props) => {
 
     <div> <form onSubmit={handleSubmit}>
 
-      <label htmlFor="name">Full Name</label>
-      <input type="text" value={name} id="name" placeholder='Full Name' onChange={handleNameChange} />
+      <TextField
 
-      <label htmlFor="email">Email</label>
-      <input value={email} type="email" placeholder="ex:youremail@email.com" id="email" name="email" onChange={handleEmilChange} />
+        title="Full Name"
+        type="text"
+        htmlfor="name"
+        id="name"
+        placeholder="Full Name"
+        value={name}
+        onchange={handleNameChange}
 
-      <label htmlFor="password">PassWord</label>
-      <input value={pass} type="password" placeholder="**********" id="password" name="password" onChange={handlePassChange} />
+      />
 
-      <button type="submit">Register</button>
+      <TextField
+
+        title="Email"
+        type="email"
+        htmlfor="email"
+        id="email"
+        placeholder="ex:youremail@email.com"
+        value={email}
+        onchange={handleEmailChange}
+
+      />
+
+      <TextField
+
+        title="PassWord"
+        type="password"
+        htmlfor="password"
+        id="password"
+        placeholder="************"
+        value={pass}
+        onchange={handlePassChange}
+
+      />
+
+      <Button
+        type="submit"
+        title="Register"
+      />
 
     </form>
-    <Link to="/"><button>
-        Already have an account? Log in here
-      </button></Link>
+      <Link to="/">
+        <Button
+        title="Already have an account? Log in here"
+        />
+      </Link>
     </div>)
 }
 export default Register
