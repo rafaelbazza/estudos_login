@@ -2,8 +2,10 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import TextField from './TextField'
+import Button from './ButtonComponent'
 
-const LoginForm = (props) => {
+const LoginForm = () => {
   const [email, setEmail] = useState('')
   const [pass, setPass] = useState('')
 
@@ -19,9 +21,11 @@ const LoginForm = (props) => {
     e.preventDefault()
     console.log(
       {
+
         email,
         pass
       })
+
     setEmail('')
     setPass('')
   }
@@ -29,24 +33,49 @@ const LoginForm = (props) => {
 
     <div className='login-form'>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="email">Email</label>
-          <input value={email} type="email" placeholder="ex:youremail@email.com" id="email" name="email" onChange={handleEmilChange} />
-        </div>
-        <div>
-          <label htmlFor="password">PassWord</label>
-          <input value={pass} type="password" placeholder="**********" id="password" name="password" onChange={handlePassChange} />
-        </div>
-        <div>
-          <button type="submit">Log In</button>
-        </div>
+
+<TextField
+
+title="Email"
+placeholder="ex:youremail@email.com"
+html="email"
+id="email"
+type="email"
+name="email"
+value={email}
+onchange={handleEmilChange}
+
+>
+
+</TextField>
+
+<TextField
+
+title="Password"
+placeholder="************"
+html="password"
+id="password"
+type="password"
+name="password"
+value={pass}
+onchange={handlePassChange}
+
+>
+
+</TextField>
+<Button
+
+type="submit"
+title="Log In"
+
+/>
 
       </form>
 
       <Link to="/register">
-        <button >
-          Don't have an account? Register here
-          np</button>
+      <Button
+      title="Don't have an account? Register here"
+      />
       </Link>
 
     </div>
