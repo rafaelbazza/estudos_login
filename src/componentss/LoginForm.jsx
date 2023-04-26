@@ -32,7 +32,7 @@ const LoginForm = () => {
   return (
 
     <div className='login-form'>
-      <form onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit}>
 
         <TextField
 

@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import TextField from './TextField'
 import Button from './ButtonComponent'
 
-const Register = (props) => {
+const Register = () => {
   const navigate = useNavigate()
 
   const [email, setEmail] = useState('')
@@ -35,11 +35,11 @@ const Register = (props) => {
     setEmail('')
     setName('')
     setPass('')
-    return navigate('/')
+    return navigate('/loginform')
   }
   return (
 
-    <div> <form onSubmit={handleSubmit}>
+    <div className='login-form'> <form className="form" onSubmit={handleSubmit}>
 
       <TextField
 
@@ -83,9 +83,9 @@ const Register = (props) => {
       />
 
     </form>
-      <Link to="/">
+      <Link to="/loginform">
         <Button
-        title="Already have an account? Log in here"
+          title="Already have an account? Log in here"
         />
       </Link>
     </div>)

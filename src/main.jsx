@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App'
 import Register from './componentss/registration'
 import LoginPage from './pages/LoginPage'
+import LoginForm from './componentss/LoginForm'
 
 // 3 estilizar o app
 /* Criar componentes FormInput e FormButton
@@ -27,11 +28,18 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <LoginPage />
-      },
-      {
-        path: '/register',
-        element: <Register />
+        element: <LoginPage />,
+        children: [
+          {
+            path: '/loginform',
+            element: <LoginForm />
+          },
+          {
+            path: '/register',
+            element: <Register />
+          }
+
+        ]
       }
 
     ]

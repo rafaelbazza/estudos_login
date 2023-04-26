@@ -3,12 +3,39 @@
     justify-content: center;
     height: 100vh;
     align-items: center;
+   
 }
 
 .login-form{
     background: #a0369e;
-    width: 40%;
+    width: 80%;
     padding: 21px;
-    height: fit-content;
     border-radius: 31px;
+    opacity: 0.90;
+}
+
+.background-image{
+    display: flex;
+    background-color: black;
+    width: 150%;
+    height: 150%;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+    position: absolute;
+}
+.content{
+    
+    z-index: 1;
+}
+
+.image{
+    height: 45%;
+}
+
+.form{
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }

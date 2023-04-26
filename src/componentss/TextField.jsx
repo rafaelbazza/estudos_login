@@ -3,28 +3,31 @@ import React from 'react'
 
 const TextField = (props) => {
   return (
-        <div>
-            <label
+    <div>
+      <div>
+        <label
 
-            htmlFor={props.htmlfor}
+          htmlFor={props.htmlfor}
 
-            >
-             {props.title}
-                </label>
+        >
+          {props.title}
+        </label>
+      </div>
+      <div>
+        <input
 
-            <input
+          placeholder={props.placeholder}
+          id={props.id}
+          type={props.type}
+          name={props.name}
+          value={props.value}
+          onChange={props.onchange}
+          required
 
-             placeholder={props.placeholder}
-             id={props.id}
-             type={props.type}
-             name={props.name}
-             value={props.value}
-             onChange={props.onchange}
-             required
+        ></input>
+      </div>
 
-            ></input>
-
-        </div>
+    </div>
   )
 }
 
