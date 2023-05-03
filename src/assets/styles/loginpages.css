@@ -3,6 +3,7 @@
     justify-content: center;
     height: 100vh;
     align-items: center;
+    font-family: cursive;
    
 }
 
@@ -12,6 +13,7 @@
     padding: 21px;
     border-radius: 31px;
     opacity: 0.90;
+    box-shadow: 8px 8px 8px rgb(76, 46, 245);
 }
 
 .background-image{
@@ -34,8 +36,42 @@
 }
 
 .form{
+    color: aliceblue;
     height: 30vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+.link-switch{
+
+    color: aliceblue;
+    text-decoration: underline;
+    opacity: 150;
+    
+}
+
+.link-switch:active{
+
+    color: rgb(65, 0, 55);
+    text-decoration: underline;
+    opacity: 150;
+
+}
+
+.btn-forms{
+    border-radius: 25%;
+    box-shadow: 0px 1px 3px rgb(140, 0, 0);
+    border: none;
+    color: white;
+    text-align: center;
+    background-color: #c519a8;
+    margin: 4px 2px;
+   
+}
+
+.btn-forms:active{
+    background-color: #1e041a;
+    color: rgb(252, 67, 190);
+
 }

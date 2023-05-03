@@ -70,9 +70,9 @@ const LoginForm = () => {
       </form>
 
       <Link to="/register">
-        <Button
-          title="Don't have an account? Register here"
-        />
+
+        <a className='link-switch'>"Don't have an account? Register here"</a>
+
       </Link>
 
     </div>

@@ -83,10 +83,10 @@ const Register = () => {
       />
 
     </form>
-      <Link to="/loginform">
-        <Button
-          title="Already have an account? Log in here"
-        />
+      <Link to="/">
+
+        <a className='link-switch'>"Already have an account? Log in here"</a>
+
       </Link>
     </div>)
 }

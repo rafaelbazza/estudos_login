@@ -4,8 +4,7 @@ import React from 'react'
 // eslint-disable-next-line no-unused-vars
 
 import '../assets/styles/loginpages.css'
-// eslint-disable-next-line no-unused-vars
-import LoginForm from '../componentss/LoginForm'
+
 // eslint-disable-next-line no-unused-vars
 import { Outlet } from 'react-router-dom'
 
@@ -13,10 +12,11 @@ const LoginPage = () => {
   return (
     <div className="login-page">
       <div className='background-image'>
-        <img className="image"src="src\assets\kjh.png" alt="" />
+        <img className="image" src="src\assets\kjh.png" alt="" />
       </div>
       <div className='content'>
-        <Outlet/>
+
+       <Outlet/>
       </div>
 
     </div>

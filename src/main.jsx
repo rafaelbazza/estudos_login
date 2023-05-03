@@ -31,7 +31,7 @@ const router = createBrowserRouter([
         element: <LoginPage />,
         children: [
           {
-            path: '/loginform',
+            path: '/',
             element: <LoginForm />
           },
           {
