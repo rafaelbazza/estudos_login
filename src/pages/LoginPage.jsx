@@ -14,10 +14,8 @@ const LoginPage = () => {
       <div className='background-image'>
         <img className="image" src="src\assets\kjh.png" alt="" />
       </div>
-      <div className='content'>
 
        <Outlet/>
-      </div>
 
     </div>
 

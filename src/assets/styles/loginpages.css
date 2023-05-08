@@ -19,8 +19,8 @@
 .background-image{
     display: flex;
     background-color: black;
-    width: 150%;
-    height: 150%;
+    width: 100%;
+    height: 100%;
     align-items: center;
     justify-content: center;
     z-index: 0;
@@ -74,4 +74,13 @@
     background-color: #1e041a;
     color: rgb(252, 67, 190);
 
+}
+
+
+@media screen and (max-width:500px) {
+
+    .login-form{
+       background-color: aqua;
+    }
+    
 }

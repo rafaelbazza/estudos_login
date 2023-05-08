@@ -1,27 +1,29 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
 
-const TextField = (props) => {
+const TextField = ({ placeholder = 'any', id, type = 'text', name, value, onChange, htmlFor, title }) => {
   return (
     <div>
       <div>
+        {title && (
         <label
-
-          htmlFor={props.htmlfor}
+          htmlFor={htmlFor}
 
         >
-          {props.title}
+          {title}
         </label>
+        )}
+
       </div>
       <div>
         <input
 
-          placeholder={props.placeholder}
-          id={props.id}
-          type={props.type}
-          name={props.name}
-          value={props.value}
-          onChange={props.onchange}
+          placeholder={placeholder}
+          id={id}
+          type={type}
+          name={name}
+          value={value}
+          onChange={onChange}
           required
 
         ></input>

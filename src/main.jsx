@@ -7,18 +7,14 @@ import Register from './componentss/registration'
 import LoginPage from './pages/LoginPage'
 import LoginForm from './componentss/LoginForm'
 
-// 3 estilizar o app
-/* Criar componentes FormInput e FormButton
-FormInput recebe label como props. Se nada vier nessa propriedade, o label é omitido do componente
-FormButton recebe o texto do botão. Esse texto não pode ser nulo. Se nada vier, recebe um texto default
+/*
 
-Fazer curso de Sass e aplicar na estrutura
-
-Estilizar tudo e deixar bonita
-
-Estudar Flexbox e grid
-
-grid e mediaquery*
+   -Na estrutura do html retirar todas divs desnecessarias
+   -considerando a hierarquia, criar de maneira pratica, pensando nas minimas telas e maximas telas de responsividade,
+   com uso de with e high em porcentagem para os elementos children e vh vw para os elementos parent
+   -refatorar componentes para receber valor previo de props ou renderização condicional
+   -adicionar fer no projeto e começar a mecher o projeto em uma nova branch para trabalhar com pull request
+   -atualizar o que esta sendo feito no trello
 */
 
 const router = createBrowserRouter([
