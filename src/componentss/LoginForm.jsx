@@ -36,27 +36,25 @@ const LoginForm = () => {
 
         <TextField
 
-          title="Email"
           placeholder="ex:youremail@email.com"
           html="email"
           id="email"
           type="email"
           name="email"
           value={email}
-          onchange={handleEmilChange}
+          onChange={handleEmilChange}
 
         />
 
         <TextField
 
-          title="Password"
           placeholder="************"
           html="password"
           id="password"
           type="password"
           name="password"
           value={pass}
-          onchange={handlePassChange}
+          onChange={handlePassChange}
 
         />
 
@@ -67,13 +65,13 @@ const LoginForm = () => {
 
         />
 
-      </form>
-
       <Link to="/register">
 
         <a className='link-switch'>"Don't have an account? Register here"</a>
 
       </Link>
+
+      </form>
 
     </div>
   )

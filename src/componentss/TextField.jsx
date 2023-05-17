@@ -4,7 +4,7 @@ import React from 'react'
 const TextField = ({ placeholder = 'any', id, type = 'text', name, value, onChange, htmlFor, title }) => {
   return (
     <div>
-      <div>
+
         {title && (
         <label
           htmlFor={htmlFor}
@@ -14,8 +14,6 @@ const TextField = ({ placeholder = 'any', id, type = 'text', name, value, onChan
         </label>
         )}
 
-      </div>
-      <div>
         <input
 
           placeholder={placeholder}
@@ -27,7 +25,6 @@ const TextField = ({ placeholder = 'any', id, type = 'text', name, value, onChan
           required
 
         ></input>
-      </div>
 
     </div>
   )

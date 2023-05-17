@@ -35,7 +35,7 @@ const Register = () => {
     setEmail('')
     setName('')
     setPass('')
-    return navigate('/loginform')
+    return navigate('/')
   }
   return (
 
@@ -43,37 +43,34 @@ const Register = () => {
 
       <TextField
 
-        title="Full Name"
         type="text"
         htmlfor="name"
         id="name"
         placeholder="Full Name"
         value={name}
-        onchange={handleNameChange}
+        onChange={handleNameChange}
 
       />
 
       <TextField
 
-        title="Email"
         type="email"
         htmlfor="email"
         id="email"
         placeholder="ex:youremail@email.com"
         value={email}
-        onchange={handleEmailChange}
+        onChange={handleEmailChange}
 
       />
 
       <TextField
 
-        title="PassWord"
         type="password"
         htmlfor="password"
         id="password"
         placeholder="************"
         value={pass}
-        onchange={handlePassChange}
+        onChange={handlePassChange}
 
       />
 
@@ -82,12 +79,13 @@ const Register = () => {
         title="Register"
       />
 
-    </form>
       <Link to="/">
 
         <a className='link-switch'>"Already have an account? Log in here"</a>
 
       </Link>
+      </form>
+
     </div>)
 }
 export default Register
