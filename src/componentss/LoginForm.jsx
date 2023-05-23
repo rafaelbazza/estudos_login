@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import TextField from './TextField'
 import Button from './ButtonComponent'
+import UserService from '../services/userservice'
 
 const LoginForm = () => {
   const [email, setEmail] = useState('')
@@ -19,15 +20,14 @@ const LoginForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(
-      {
-
-        email,
-        pass
-      })
-
+//entender o erro do await 
+    const loggedIn = await UserService.login(
+      email,
+      pass
+    )
+if(loggedIn){
     setEmail('')
-    setPass('')
+    setPass('')}
   }
   return (
 
@@ -35,7 +35,6 @@ const LoginForm = () => {
       <form className="form" onSubmit={handleSubmit}>
 
         <TextField
-
           placeholder="ex:youremail@email.com"
           html="email"
           id="email"
@@ -43,11 +42,9 @@ const LoginForm = () => {
           name="email"
           value={email}
           onChange={handleEmilChange}
-
         />
 
         <TextField
-
           placeholder="************"
           html="password"
           id="password"
@@ -55,21 +52,16 @@ const LoginForm = () => {
           name="password"
           value={pass}
           onChange={handlePassChange}
-
         />
 
         <Button
-
           type="submit"
           title="Log In"
-
         />
 
-      <Link to="/register">
-
-        <a className='link-switch'>"Don't have an account? Register here"</a>
-
-      </Link>
+        <Link to="/register">
+          <a className='link-switch'>"Don't have an account? Register here"</a>
+        </Link>
 
       </form>
 

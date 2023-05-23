@@ -3,7 +3,7 @@ import React from 'react'
 
 const TextField = ({ placeholder = 'any', id, type = 'text', name, value, onChange, htmlFor, title }) => {
   return (
-    <div>
+    <div className='text-field'>
 
         {title && (
         <label
