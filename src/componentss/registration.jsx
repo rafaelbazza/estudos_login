@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import TextField from './TextField'
 import Button from './ButtonComponent'
+import toast, { Toaster } from 'react-hot-toast'
 
 const Register = () => {
   const navigate = useNavigate()
@@ -84,6 +85,7 @@ const Register = () => {
        "Already have an account? Log in here"
 
       </Link>
+      <Toaster/>
       </form>
 
     </div>)

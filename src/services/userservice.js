@@ -1,26 +1,23 @@
 
-import toast from 'react-hot-toast'
 import { users } from '../utils/data/users'
+import toast from 'react-hot-toast'
 
 const UserService = {
   login: async (email, pass) => {
     try {
       let userFound = false
-      // substituir por um for por conta de forEach ser assincrono
+
       users.forEach(user => {
         if (email === user.email && pass === user.pass) {
           userFound = true
-          // break --- no foreach nao se usa o break, solucionar
         }
       })
 
       // conselo dos toasts para fazer funcionar
       if (userFound) {
-        console.log('Usuário encontrado!')
         toast.success('Usuário encontrado!')
       } else {
-        console.log('Usuário não encontrado')
-        toast.error('Usuário não encontrado!')
+        toast.error('Usuário não encontrado')
       }
       return true
       // return { success: true, message: 'Login Successfull', user: response.data }

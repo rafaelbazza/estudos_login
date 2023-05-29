@@ -7,7 +7,6 @@ import Register from './componentss/registration'
 import LoginPage from './pages/LoginPage'
 import LoginForm from './componentss/LoginForm'
 
-// usar consoles e debug para entender porque o toast nao funciona
 // integrar com o github, pull request e branch separada
 /* - entender async, await e promises
 - fazer codigo do toast funcionar
