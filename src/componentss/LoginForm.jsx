@@ -18,16 +18,17 @@ const LoginForm = () => {
     setPass(e.target.value)
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-//entender o erro do await 
+    // entender o erro do await
     const loggedIn = await UserService.login(
       email,
       pass
     )
-if(loggedIn){
-    setEmail('')
-    setPass('')}
+    if (loggedIn) {
+      setEmail('')
+      setPass('')
+    }
   }
   return (
 
@@ -59,8 +60,8 @@ if(loggedIn){
           title="Log In"
         />
 
-        <Link to="/register">
-          <a className='link-switch'>"Don't have an account? Register here"</a>
+        <Link className='link-switch' to="/register">
+          "Don't have an account? Register here"
         </Link>
 
       </form>

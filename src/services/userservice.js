@@ -8,16 +8,18 @@ const UserService = {
       let userFound = false
       // substituir por um for por conta de forEach ser assincrono
       users.forEach(user => {
-        console.log(pass)
         if (email === user.email && pass === user.pass) {
           userFound = true
           // break --- no foreach nao se usa o break, solucionar
         }
       })
+
       // conselo dos toasts para fazer funcionar
       if (userFound) {
+        console.log('Usuário encontrado!')
         toast.success('Usuário encontrado!')
       } else {
+        console.log('Usuário não encontrado')
         toast.error('Usuário não encontrado!')
       }
       return true

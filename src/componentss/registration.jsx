@@ -79,9 +79,9 @@ const Register = () => {
         title="Register"
       />
 
-      <Link to="/">
+      <Link className='link-switch' to="/">
 
-        <a className='link-switch'>"Already have an account? Log in here"</a>
+       "Already have an account? Log in here"
 
       </Link>
       </form>
