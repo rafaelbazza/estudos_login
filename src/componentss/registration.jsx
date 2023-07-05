@@ -3,9 +3,11 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import TextField from './TextField'
 import Button from './ButtonComponent'
+import { users } from '../utils/data/users'
 import toast, { Toaster } from 'react-hot-toast'
 
 const Register = () => {
+  console.log(users)
   const navigate = useNavigate()
 
   const [email, setEmail] = useState('')
@@ -26,11 +28,14 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+
+    const newUser = { name, email, pass }
+
+    users.push(newUser)
+
     console.log(
       {
-        name,
-        email,
-        pass
+        users
       }
     )
     setEmail('')
