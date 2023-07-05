@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import TextField from './TextField'
 import Button from './ButtonComponent'
 import UserService from '../services/userservice'
+import toast, { Toaster } from 'react-hot-toast'
 
 const LoginForm = () => {
   const [email, setEmail] = useState('')
@@ -33,7 +34,7 @@ const LoginForm = () => {
   return (
 
     <div className='login-form'>
-      <form className="form" onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit } >
 
         <TextField
           placeholder="ex:youremail@email.com"
@@ -55,14 +56,16 @@ const LoginForm = () => {
           onChange={handlePassChange}
         />
 
-        <Button
-          type="submit"
+         <Button
+         type="submit"
           title="Log In"
         />
 
         <Link className='link-switch' to="/register">
           "Don't have an account? Register here"
         </Link>
+
+        <Toaster/>
 
       </form>
 
